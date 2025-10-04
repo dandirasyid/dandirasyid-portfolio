@@ -1,0 +1,134 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    max-width: var(--container);
+    margin: 15px auto;
+}
+
+.brand {
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.2px;
+}
+
+.brand span {
+    color: var(--accent-1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--muted);
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: all 0.18s;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+    background: rgba(43, 182, 176, 0.06);
+}
+
+.cta {
+    background: linear-gradient(90deg, var(--accent-2), #ff936f);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(255, 123, 108, 0.12);
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: 0;
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(6px);
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        width: 200px;
+        gap: 10px;
+    }
+
+    .nav-links.mobile-active a.cta {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        width: 200px;
+        gap: 10px;
+    }
+
+    .nav-links.mobile-active a.cta {
+        margin-top: 5px;
+    }
+}
