@@ -10,10 +10,10 @@ function Footer() {
                     <span className="footer-name">Dandi Rasyid</span>
                     <span className="footer-copy">© {year} All rights reserved.</span>
                 </div>
-                <div className="footer-status">
-                    <div className="status-dot"></div>
-                    <span>Available for projects</span>
-                </div>
+                    {/* <div className="footer-status">
+                        <div className="status-dot"></div>
+                        <span>Available for projects</span>
+                    </div> */}
             </div>
         </footer>
     );

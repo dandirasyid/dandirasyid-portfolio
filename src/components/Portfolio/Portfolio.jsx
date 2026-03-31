@@ -3,7 +3,7 @@ import Portfolios from "../utils/constants/portfolio";
 import "./Portfolio.css";
 
 function Portfolio() {
-    const portfoliosPerClick = 3;
+    const portfoliosPerClick = 2;
     const [visibleCount, setVisibleCount] = useState(portfoliosPerClick);
 
     const handleLoadMore = () => {
@@ -36,7 +36,7 @@ function Portfolio() {
                             <div className="portfolio-info-premium">
                                 <div className="info-main">
                                     <h3 className="portfolio-item-title">{item.title}</h3>
-                                    <p className="portfolio-item-year">2024</p>
+                                    <p className="portfolio-item-year">{item.year}</p>
                                 </div>
                                 <p className="portfolio-item-desc">{item.desc}</p>
                                 <div className="portfolio-item-tags">

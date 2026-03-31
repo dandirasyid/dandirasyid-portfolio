@@ -21,6 +21,7 @@ const Portfolios = [
             "Laravel",
             "MySQL",
         ],
+        year: "2025",
     },
     {
         id: 2,
@@ -37,6 +38,7 @@ const Portfolios = [
             "Laravel",
             "MySQL",
         ],
+        year: "2024",
     },
     {
         id: 3,
@@ -45,6 +47,7 @@ const Portfolios = [
         img: MovieApp,
         link: "https://frontend-programming-pearl.vercel.app/",
         tags: ["HTML", "CSS", "Javascript", "React JS"],
+        year: "2023",
     },
     {
         id: 4,
@@ -53,6 +56,7 @@ const Portfolios = [
         img: CovidId,
         link: "https://covid-app-pearl.vercel.app/",
         tags: ["HTML", "CSS", "Javascript", "React JS"],
+        year: "2023",
     },
     {
         id: 5,
@@ -61,6 +65,7 @@ const Portfolios = [
         img: Gunungku,
         link: "https://gunungku.netlify.app/",
         tags: ["HTML", "CSS", "Javascript", "Bootstrap"],
+        year: "2023",
     },
     {
         id: 6,
@@ -69,6 +74,7 @@ const Portfolios = [
         img: DrShoes,
         link: "https://www.figma.com/proto/jWsrfP4SMa77gFzndpTh5c/DrShoes?node-id=387-2&t=Ctp5qN5D1X41yvCS-1&scaling=scale-down&content-scaling=fixed&page-id=8%3A3&starting-point-node-id=387%3A2",
         tags: ["UI/UX"],
+        year: "2022",
     },
 ];
 

@@ -15,7 +15,7 @@
 
 .exp-item-premium {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 50px 1fr;
     gap: 40px;
     padding-bottom: 80px;
     border-left: 1px solid var(--border);
@@ -34,7 +34,7 @@
 .exp-year {
     font-size: 0.9rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: var(--text-tertiary);
 }
 
 .exp-dot {
@@ -61,7 +61,7 @@
 .exp-company-premium {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--text-secondary);
 }
 
 .exp-desc-premium {

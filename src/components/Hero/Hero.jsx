@@ -6,10 +6,14 @@ function Hero() {
             <div className="hero-aura"></div>
             <div className="container hero-container">
                 <div className="hero-content">
-                    <span className="hero-subtitle">Junior Web Developer & Designer</span>
+                    <div className="hero-roles-heading">
+                        <span>-</span>
+                        <span className="hero-subtitle">Junior Web Developer</span>
+                        <span>-</span>
+                    </div>
                     <h1 className="hero-headline">
-                        Designing for the <br />
-                        <span className="text-professional">human experience.</span>
+                        Building scalable and<br />
+                        <span className="text-professional"> efficient web.</span>
                     </h1>
                     <p className="hero-lead">
                         I'm Dandi Rasyid, a developer focused on building intuitive,

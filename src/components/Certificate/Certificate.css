@@ -40,9 +40,13 @@
 .btn-cert-view {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+.btn-cert-view:hover {
+    color: var(--accent);
 }
 
 .cert-footer-premium {

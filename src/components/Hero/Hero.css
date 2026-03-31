@@ -1,15 +1,13 @@
 .hero {
     position: relative;
     min-height: 90vh;
-    /* Slightly reduced for better alignment focus */
     display: flex;
     align-items: center;
     overflow: hidden;
     padding-top: 100px;
-    /* Increased to account for fixed header comfortably */
 }
 
-.hero-aura {
+/* .hero-aura {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,6 +17,13 @@
     background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
     z-index: -1;
     pointer-events: none;
+} */
+
+.hero-roles-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .hero-subtitle {
@@ -27,8 +32,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--accent);
-    margin-bottom: 24px;
+    color: var(--text-tertiary);
 }
 
 .hero-headline {
