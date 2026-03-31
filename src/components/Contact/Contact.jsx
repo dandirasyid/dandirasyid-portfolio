@@ -1,11 +1,8 @@
 import "./Contact.css";
-import Instagram from "../../assets/instagram.png";
-import Linkedin from "../../assets/linkedin.png";
-import Github from "../../assets/github.png";
-import Email from "../../assets/email.png";
 
 function Contact() {
     return (
+        // Section
         <section id="contact" className="section contact">
             <div className="container">
                 <div className="contact-grid-premium">
