@@ -1,9 +1,8 @@
 import "./Experience.css";
-import AmanahKarya from "../../assets/pt-amanah-karya.png";
-import InfiniteLearning from "../../assets/infinite-learning.jpg";
 
 function Experience() {
     return (
+        // Section 
         <section id="experience" className="section experience">
             <div className="container">
                 <div className="exp-grid-premium">
