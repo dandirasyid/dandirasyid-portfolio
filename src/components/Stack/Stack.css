@@ -1,51 +1,73 @@
-.section.stack {
-    background: linear-gradient(
-        180deg,
-        var(--bg-1) 0%,
-        var(--bg-2) 50%,
-        var(--bg-1) 100%
-    );
+.stack {
+    background-color: var(--bg-sub);
+    border-top: 1px solid var(--border);
 }
 
-.tech-grid {
+.stack-grid-professional {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 100px;
+    align-items: flex-start;
 }
 
-.tech-item {
+.section-title-premium-left {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.stack-desc-professional {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 400px;
+}
+
+.stack-items-professional {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 40px;
+}
+
+.stack-logotype {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    min-height: 100px;
+    gap: 12px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 
-.tech-item img {
-    width: auto;
-    height: 50px;
-    margin-bottom: 0.5rem;
-    filter: grayscale(100%);
-    cursor: pointer;
-    transition: filter 0.3s ease, transform 0.3s ease;
+.stack-logotype:hover {
+    opacity: 1;
 }
 
-.tech-item:hover img {
-    filter: grayscale(0%);
-    transform: translateY(-5px);
+.stack-icon-wrap {
+    width: 32px;
+    height: 32px;
 }
 
-.tech-item span {
-    font-size: 0.95rem;
-    color: #333;
-    font-weight: 500;
-    min-height: 2.2rem;
-    transition: color 0.3s ease;
+.stack-icon-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
 }
 
-.tech-item:hover span {
-    color: #000;
+.stack-logotype:hover img {
+    filter: grayscale(0);
+}
+
+.stack-label-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+}
+
+@media (max-width: 992px) {
+    .stack-grid-professional {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
 }

@@ -1,45 +1,25 @@
-import HeroImage from "../../assets/hero-image.jpg";
 import "./Hero.css";
 
 function Hero() {
     return (
         <section id="home" className="hero">
-            <div className="hero-inner container">
-                <div className="hero-copy">
-                    <p className="h-sub h-sub-color">
-                        Hi, I build things on the web
-                    </p>
-                    <h1>
-                        I'm
-                        <strong> Dandi Rasyid</strong>
-                        <br />
-                        <span className="hero-job-title">
-                            Junior Web Developer
-                        </span>
+            <div className="hero-aura"></div>
+            <div className="container hero-container">
+                <div className="hero-content">
+                    <span className="hero-subtitle">Junior Web Developer & Designer</span>
+                    <h1 className="hero-headline">
+                        Designing for the <br />
+                        <span className="text-professional">human experience.</span>
                     </h1>
-                    <p>
-                        Building clean and modern web solutions with a focus on
-                        user experience. Passionate about turning ideas into
-                        functional, and scalable applications.
+                    <p className="hero-lead">
+                        I'm Dandi Rasyid, a developer focused on building intuitive,
+                        clean, and high-performance web applications that solve real problems.
                     </p>
-
                     <div className="hero-actions">
-                        <a className="btn-primary" href="#portfolio">
-                            View Portfolio
-                        </a>
-                        <a className="btn-ghost" href="#contact">
-                            Get in touch
-                        </a>
+                        <a href="#portfolio" className="btn btn-primary">Recent Work</a>
+                        <a href="#about" className="btn btn-outline">About Me</a>
                     </div>
                 </div>
-
-                <aside className="hero-card" aria-hidden="false">
-                    <div className="hero-card-image">
-                        <div className="hero-avatar" aria-hidden="true">
-                            <img src={HeroImage} alt="Dandi Rasyid" />
-                        </div>
-                    </div>
-                </aside>
             </div>
         </section>
     );

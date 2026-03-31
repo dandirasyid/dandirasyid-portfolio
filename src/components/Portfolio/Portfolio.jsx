@@ -15,68 +15,49 @@ function Portfolio() {
     };
 
     return (
-        <div>
-            <section
-                id="portfolio"
-                className="section portfolio"
-                aria-labelledby="portfolio-title"
-            >
-                <div className="container">
-                    <div className="section-head">
-                        <div className="h-sub h-sub-color">— Portfolio —</div>
-                        <h2 id="portfolio-title" className="h-title">
-                            Selected Projects
-                        </h2>
-                    </div>
+        <section id="portfolio" className="section portfolio">
+            <div className="container">
+                <div className="section-head-premium">
+                    <span className="section-label">Selected Projects</span>
+                    <h2 className="section-title-premium">Featured Work</h2>
+                </div>
 
-                    <div className="portfolio-grid">
-                        {Portfolios.slice(0, visibleCount).map((item) => (
-                            <article className="portfolio-item" key={item.id}>
-                                <div className="portfolio-thumb-wrap">
-                                    <img
-                                        className="portfolio-thumb"
-                                        src={item.img}
-                                        alt={item.title}
-                                    />
-                                    <a
-                                        href={item.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="portfolio-link"
-                                    >
-                                        <span>↗</span>
+                <div className="portfolio-grid-premium">
+                    {Portfolios.slice(0, visibleCount).map((item) => (
+                        <article className="portfolio-card-premium" key={item.id}>
+                            <div className="portfolio-image-premium">
+                                <img src={item.img} alt={item.title} />
+                                <div className="portfolio-overlay-premium">
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn-visit">
+                                        View Case Study
                                     </a>
                                 </div>
-                                <div className="portfolio-body">
-                                    <h3>{item.title}</h3>
-                                    <p className="portfolio-desc">
-                                        {item.desc}
-                                    </p>
-                                    <div className="tech-tags">
-                                        {item.tags.map((tag, idx) => (
-                                            <span key={idx}>{tag}</span>
-                                        ))}
-                                    </div>
+                            </div>
+                            <div className="portfolio-info-premium">
+                                <div className="info-main">
+                                    <h3 className="portfolio-item-title">{item.title}</h3>
+                                    <p className="portfolio-item-year">2024</p>
                                 </div>
-                            </article>
-                        ))}
-                    </div>
-
-                    {Portfolios.length > portfoliosPerClick && (
-                        <div className="portfolio-actions">
-                            <button
-                                onClick={handleLoadMore}
-                                className="btn-loadmore"
-                            >
-                                {visibleCount >= Portfolios.length
-                                    ? "Show Less"
-                                    : "Load More"}
-                            </button>
-                        </div>
-                    )}
+                                <p className="portfolio-item-desc">{item.desc}</p>
+                                <div className="portfolio-item-tags">
+                                    {item.tags.map((tag, idx) => (
+                                        <span key={idx} className="tag-premium">{tag}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
-            </section>
-        </div>
+
+                {Portfolios.length > portfoliosPerClick && (
+                    <div className="load-more-wrap">
+                        <button onClick={handleLoadMore} className="btn-load-more">
+                            {visibleCount >= Portfolios.length ? "View Less" : "Archive →"}
+                        </button>
+                    </div>
+                )}
+            </div>
+        </section>
     );
 }
 

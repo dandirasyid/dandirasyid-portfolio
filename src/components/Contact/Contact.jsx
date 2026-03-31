@@ -1,62 +1,37 @@
 import "./Contact.css";
-import Maskot from "../../assets/maskot-image.png";
 import Instagram from "../../assets/instagram.png";
 import Linkedin from "../../assets/linkedin.png";
+import Github from "../../assets/github.png";
 import Email from "../../assets/email.png";
 
 function Contact() {
     return (
-        <div>
-            <section id="contact" className="section contact-gradient">
-                <div className="container">
-                    <div className="section-head">
-                        <div className="h-sub h-sub-color">— Let's talk —</div>
-                        <h2 className="h-title">Get in Touch</h2>
+        <section id="contact" className="section contact">
+            <div className="container">
+                <div className="contact-grid-premium">
+                    <div className="contact-header-premium">
+                        <span className="section-label">Collaboration</span>
+                        <h2 className="section-title-premium-left">Have an idea? <br />Let's build it.</h2>
+                        <p className="contact-lead-premium">
+                            I am currently available for new projects and professional
+                            opportunities. Reach out and let's discuss how I can help.
+                        </p>
                     </div>
 
-                    <div className="contact-wrap">
-                        <div className="contact-meta">
-                            <div className="mascot">
-                                <img
-                                    src={Maskot}
-                                    alt="Cute cat mascot waving"
-                                />
-                            </div>
+                    <div className="contact-actions-premium">
+                        <a href="mailto:dandirasyid2003@gmail.com" className="contact-main-link">
+                            dandirasyid2003@gmail.com <span>→</span>
+                        </a>
 
-                            <div className="quick-info">
-                                <div className="contact-item">
-                                    <a
-                                        href="mailto:dandirasyid2003@gmail.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img src={Email} alt="Email" />
-                                    </a>
-                                </div>
-                                <div className="contact-item">
-                                    <a
-                                        href="https://www.linkedin.com/in/dandi-rasyid-969721228"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img src={Linkedin} alt="LinkedIn" />
-                                    </a>
-                                </div>
-                                <div className="contact-item">
-                                    <a
-                                        href="https://www.instagram.com/dndrasyid/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img src={Instagram} alt="Instagram" />
-                                    </a>
-                                </div>
-                            </div>
+                        <div className="social-links-premium">
+                            <a href="https://linkedin.com/in/dandirasyid" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a href="https://github.com/dandirasyid" target="_blank" rel="noreferrer">Github</a>
+                            <a href="https://instagram.com/dndrasyid" target="_blank" rel="noreferrer">Instagram</a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 

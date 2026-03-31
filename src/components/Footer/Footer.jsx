@@ -1,21 +1,21 @@
 import "./Footer.css";
 
 function Footer() {
+    const year = new Date().getFullYear();
+
     return (
-        <div>
-            <footer>
-                <div className="container">
-                    <div className="wrapper">
-                        <div className="footer-title">
-                            © <span id="year"></span> Dandi Rasyid
-                        </div>
-                        <div className="footer-desc">
-                            Designed and built with 💖 & ☕
-                        </div>
-                    </div>
+        <footer className="footer-premium">
+            <div className="container footer-content-premium">
+                <div className="footer-identity">
+                    <span className="footer-name">Dandi Rasyid</span>
+                    <span className="footer-copy">© {year} All rights reserved.</span>
                 </div>
-            </footer>
-        </div>
+                <div className="footer-status">
+                    <div className="status-dot"></div>
+                    <span>Available for projects</span>
+                </div>
+            </div>
+        </footer>
     );
 }
 

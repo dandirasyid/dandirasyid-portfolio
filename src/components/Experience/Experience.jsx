@@ -4,112 +4,52 @@ import InfiniteLearning from "../../assets/infinite-learning.jpg";
 
 function Experience() {
     return (
-        <div>
-            <section id="experience" className="section experience">
-                <div className="container">
-                    <div className="section-head">
-                        <div className="h-sub h-sub-color">— Experiences —</div>
-                        <h2 className="h-title">Explore My Journey</h2>
+        <section id="experience" className="section experience">
+            <div className="container">
+                <div className="exp-grid-premium">
+                    <div className="exp-header-premium">
+                        <span className="section-label">Timeline</span>
+                        <h2 className="section-title-premium-left">Professional Journey</h2>
                     </div>
 
-                    <div className="experience-list">
-                        <div className="exp-item">
-                            <div className="exp-left">
-                                <img
-                                    src={AmanahKarya}
-                                    alt="PT Amanah Karya"
-                                    className="exp-logo"
-                                />
-                                <div className="exp-info">
-                                    <h4>Web Developer</h4>
-                                    <span className="exp-company">
-                                        PT. Amanah Karya Indonesia
-                                    </span>
-                                    <span className="exp-date">
-                                        Feb 2024 - Jun 2024
-                                    </span>
-                                    <span className="exp-location">
-                                        Depok, Indonesia • Independent Study
-                                        (Project Base)
-                                    </span>
-                                </div>
+                    <div className="exp-list-premium">
+                        <div className="exp-item-premium">
+                            <div className="exp-side">
+                                <span className="exp-year">2024</span>
+                                <div className="exp-dot"></div>
                             </div>
-                            <div className="exp-center">
-                                <p>
-                                    Experienced in web development with HTML,
-                                    CSS, JavaScript, PHP, Laravel, Bootstrap,
-                                    and MySQL, skilled in mockups, flowcharts,
-                                    ERD, UML, and strong in communication,
-                                    problem solving, teamwork, and project
-                                    management tools.
+                            <div className="exp-main">
+                                <div className="exp-title-row">
+                                    <h3>Web Developer</h3>
+                                    <span className="exp-company-premium">PT. Amanah Karya Indonesia</span>
+                                </div>
+                                <p className="exp-desc-premium">
+                                    Focused on building robust web solutions using Laravel and modern JavaScript tools.
+                                    Collaborated in a project-based environment to deliver functional and scalable applications.
                                 </p>
-                            </div>
-                            <div className="exp-right">
-                                <div className="exp-tags">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>PHP</span>
-                                    <span>Bootstrap</span>
-                                    <span>Laravel</span>
-                                    <span>MySQL</span>
-                                    <span>Communication </span>
-                                    <span>Creative Thinking </span>
-                                    <span>Project Management Tools</span>
-                                </div>
                             </div>
                         </div>
 
-                        <div className="exp-item">
-                            <div className="exp-left">
-                                <img
-                                    src={InfiniteLearning}
-                                    alt="Innovative Designs Logo"
-                                    className="exp-logo"
-                                />
-                                <div className="exp-info">
-                                    <h4>Web Development</h4>
-                                    <span className="exp-company">
-                                        Infinite Learning Indonesia
-                                    </span>
-                                    <span className="exp-date">
-                                        Agu 2023 - Des 2023
-                                    </span>
-                                    <span className="exp-location">
-                                        Batam, Indonesia • Independent Study
-                                        (Project Base)
-                                    </span>
-                                </div>
+                        <div className="exp-item-premium">
+                            <div className="exp-side">
+                                <span className="exp-year">2023</span>
+                                <div className="exp-dot"></div>
                             </div>
-                            <div className="exp-center">
-                                <p>
-                                    Experienced in web development with HTML,
-                                    CSS, JavaScript, Bootstrap, React.js, and
-                                    MySQL, with skills in Figma, system design,
-                                    user research, and teamwork.
+                            <div className="exp-main">
+                                <div className="exp-title-row">
+                                    <h3>Web Development</h3>
+                                    <span className="exp-company-premium">Infinite Learning Indonesia</span>
+                                </div>
+                                <p className="exp-desc-premium">
+                                    Developed user-centric interfaces and researched user behaviors for digital products.
+                                    Strengthened foundation in React.js and modern UI/UX design principles.
                                 </p>
-                            </div>
-                            <div className="exp-right">
-                                <div className="exp-tags">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>PHP</span>
-                                    <span>Bootstrap</span>
-                                    <span>React JS</span>
-                                    <span>MySQL</span>
-                                    <span>UI/UX</span>
-                                    <span>Communication </span>
-                                    <span>Creative Thinking </span>
-                                    <span>Branding</span>
-                                    <span>Project Management Tools</span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 

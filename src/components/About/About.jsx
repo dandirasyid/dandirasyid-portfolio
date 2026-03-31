@@ -2,54 +2,36 @@ import "./About.css";
 
 function About() {
     return (
-        <div>
-            <section id="about" className="section about-section">
-                <div className="container about-inner">
-                    <div className="about-left">
-                        <p className="subtitle">— About Me</p>
-                        <h2>Get to know me</h2>
-                        <p className="desc">
-                            I'm fresh graduate passionate about creating digital
-                            experiences and analyzing data to help businesses
-                            grow. I enjoy developing, and exploring innovative
-                            solutions.
-                        </p>
-                        <a
-                            href="mailto:dandirasyid2003@gmail.com"
-                            className="email-link"
-                        >
-                            dandirasyid2003@gmail.com →
-                        </a>
+        <section id="about" className="section about">
+            <div className="container">
+                <div className="about-grid-premium">
+                    <div className="about-header-group">
+                        <span className="about-kicker">Background</span>
+                        <h2 className="about-headline">Solving problems with <span className="text-muted-professional">clean solutions.</span></h2>
                     </div>
 
-                    <div className="about-right">
-                        <p className="quote">
-                            "FOCUS, CONSISTENCY, INTEGRITY, ADAPTIVE"
-                        </p>
-                        <p className="desc">
-                            I specialize in Web Development, UI/UX Design, and
-                            Data Analyst. Eager to apply my skills in real-world
-                            projects and continue learning in a fast-paced
-                            digital environment.
-                        </p>
-                        <div className="stats">
-                            <div className="stat">
-                                <span className="number">10+</span>
-                                <span className="label">
-                                    Tech Stack & Tools
-                                </span>
+                    <div className="about-main-content">
+                        <div className="about-text-professional">
+                            <p>
+                                I am a developer dedicated to technical excellence and user-centric design,
+                                delivering high-performance applications that bridge functionality and aesthetics.
+                            </p>
+                        </div>
+
+                        <div className="about-expertise-list">
+                            <div className="expertise-item">
+                                <h3>Web Development</h3>
+                                <p>Building scalable and performant modern web applications.</p>
                             </div>
-                            <div className="stat">
-                                <span className="number">5+</span>
-                                <span className="label">
-                                    Certificates Earned
-                                </span>
+                            <div className="expertise-item">
+                                <h3>UI/UX Design</h3>
+                                <p>Creating intuitive and aesthetic user interfaces.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 

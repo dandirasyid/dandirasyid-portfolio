@@ -1,408 +1,69 @@
-.section.certificate {
-    background: linear-gradient(
-        -135deg,
-        var(--bg-1) 0%,
-        var(--bg-2) 50%,
-        rgba(43, 182, 176, 0.03) 100%
-    );
+.certificates {
+    background-color: var(--bg-sub);
+    border-top: 1px solid var(--border);
 }
 
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-top: 32px;
-}
-
-.certificate-item {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-}
-
-.certificate-thumb {
-    width: 100%;
-    display: block;
-    aspect-ratio: 4/3;
-    border-radius: 16px;
-    transition: transform 0.4s ease;
-}
-
-.certificate-link {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 1.4rem;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.certificate-item:hover .certificate-link {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-.certificate-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    padding: 12px 0;
-}
-
-.certificate-body h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    line-height: 1.3;
-}
-
-.certificate-desc {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 8px;
-    flex-grow: 1;
-}
-
-.certificate-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-}
-
-.certificate-tags span {
-    display: inline-block;
-    background: #eef2f5;
-    color: #555;
-    font-size: 0.7rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.certificate-actions {
+.cert-header-premium {
     text-align: center;
-    margin-top: 28px;
+    margin-bottom: 80px;
 }
 
-.btn-certificate-loadmore {
+.cert-list-premium {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cert-row-premium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+    transition: transform 0.2s ease;
+}
+
+.cert-row-premium:hover {
+    transform: translateX(10px);
+}
+
+.cert-title-premium {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+}
+
+.cert-org-premium {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.btn-cert-view {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cert-footer-premium {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.btn-toggle-certs {
     background: none;
-    border: 1px solid #ccc;
-    color: #333;
-    font-weight: 500;
-    font-size: 0.95rem;
-    padding: 8px 20px;
-    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-decoration: underline;
     cursor: pointer;
-    transition: all 0.25s ease;
 }
 
-.btn-certificate-loadmore:hover {
-    background: #f5f5f5;
-    border-color: #999;
-    color: #000;
-}
-
-.hidden-certificate {
-    display: none !important;
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-    .hero-inner {
-        grid-template-columns: 1fr 420px;
-        gap: 30px;
-        padding: 0 20px;
-    }
-
-    .exp-item {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .exp-left {
-        min-width: auto;
-        gap: 10px;
-    }
-
-    .exp-center {
-        padding: 0;
-    }
-
-    .exp-right {
-        justify-content: flex-start;
-    }
-
-    .contact-wrap {
-        grid-template-columns: 1fr;
-    }
-
-    .cert-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 920px) {
-    .nav-links {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-links.mobile-active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(6px);
-        margin-top: 10px;
-        padding: 10px 20px;
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        width: 200px;
-        gap: 10px;
-    }
-
-    .nav-links.mobile-active a.cta {
-        margin-top: 5px;
-    }
-}
-
-@media (max-width: 860px) {
-    .hero-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        text-align: center;
-        padding: 0 20px;
-    }
-
-    .hero-card {
-        order: -1;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .hero-copy p {
-        font-size: 0.95rem;
-    }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    .about-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .stats {
-        justify-content: start;
-    }
-
-    .certificates-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .certificate-body h3 {
-        font-size: 0.95rem;
-    }
-
-    .certificate-desc {
-        font-size: 0.8rem;
-    }
-
-    .certificate-tags span {
-        font-size: 0.65rem;
-        padding: 2px 5px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .portfolio-body h3 {
-        font-size: 0.95rem;
-    }
-
-    .portfolio-body .portfolio-desc {
-        font-size: 0.8rem;
-    }
-
-    .tech-tags span {
-        font-size: 0.65rem;
-        padding: 2px 5px;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-meta {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .exp-item {
-        padding: 12px 16px;
-    }
-
-    .exp-center p {
-        font-size: 0.9rem;
-    }
-
-    .exp-info h4 {
-        font-size: 0.95rem;
-    }
-
-    .exp-info .exp-location,
-    .exp-info .exp-date {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 720px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-links.mobile-active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(6px);
-        margin-top: 10px;
-        padding: 10px 20px;
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        width: 200px;
-        gap: 10px;
-    }
-
-    .nav-links.mobile-active a.cta {
-        margin-top: 5px;
-    }
-
-    .about-left h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-left .desc,
-    .about-right .desc {
-        font-size: 0.9rem;
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .exp-item {
-        display: flex;
+@media (max-width: 640px) {
+    .cert-row-premium {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .exp-left {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .exp-center {
-        padding: 8px 0;
-    }
-
-    .exp-tags {
-        gap: 5px;
-    }
-
-    .exp-tags span {
-        font-size: 0.7rem;
-        padding: 2px 6px;
-    }
-
-    .certificates-grid {
-        grid-template-columns: 1fr;
         gap: 16px;
-    }
-
-    .certificate-body h3 {
-        font-size: 0.9rem;
-    }
-
-    .certificate-desc {
-        font-size: 0.75rem;
-    }
-
-    .certificate-tags {
-        gap: 3px;
-    }
-
-    .certificate-tags span {
-        font-size: 0.6rem;
-        padding: 1px 4px;
-    }
-
-    .btn-certificate-loadmore {
-        font-size: 0.85rem;
-        padding: 6px 16px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .portfolio-body h3 {
-        font-size: 0.9rem;
-    }
-
-    .portfolio-body .portfolio-desc {
-        font-size: 0.75rem;
-    }
-
-    .tech-tags span {
-        font-size: 0.6rem;
-        padding: 1px 4px;
-    }
-
-    .btn-loadmore {
-        font-size: 0.85rem;
-        padding: 6px 16px;
     }
 }

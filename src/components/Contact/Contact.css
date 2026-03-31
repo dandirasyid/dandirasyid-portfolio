@@ -1,68 +1,66 @@
-.contact-gradient {
-    background: linear-gradient(135deg, #f0faff, #e0f7ff);
-    padding: 60px 20px;
-    border-radius: 24px;
+.contact {
+    background-color: var(--bg-main);
+    border-top: 1px solid var(--border);
 }
 
-.contact-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 24px;
+.contact-grid-premium {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: flex-end;
 }
 
-.contact-meta {
+.contact-lead-premium {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-top: 32px;
+    max-width: 500px;
+}
+
+.contact-actions-premium {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    gap: 60px;
 }
 
-.mascot img {
-    max-width: 180px;
-    height: auto;
-    filter: drop-shadow(0 8px 20px rgba(0, 170, 255, 0.2));
-    animation: floatSmooth 3s ease-in-out infinite;
-}
-
-@keyframes floatSmooth {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.quick-info {
+.contact-main-link {
+    font-size: clamp(1.25rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.05em;
     display: flex;
-    gap: 24px;
-    justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
-.contact-item a img {
-    width: 36px;
-    height: 36px;
-    transition: transform 0.3s ease;
+.contact-main-link span {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-item a img:hover {
-    transform: scale(1.2);
+.contact-main-link:hover span {
+    transform: translateX(20px);
 }
 
-/* Responsive */
-@media (max-width: 1100px) {
-    .contact-wrap {
+.social-links-premium {
+    display: flex;
+    gap: 32px;
+}
+
+.social-links-premium a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-tertiary);
+}
+
+.social-links-premium a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 992px) {
+    .contact-grid-premium {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-meta {
-        flex-direction: column;
-        gap: 20px;
+        gap: 80px;
     }
 }

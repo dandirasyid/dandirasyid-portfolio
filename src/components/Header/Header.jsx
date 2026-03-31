@@ -1,47 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 function Header() {
-    const toggleMobileMenu = () => {
-        const nav = document.querySelector(".nav-links");
-        const btn = document.querySelector(".menu-btn");
+    const [scrolled, setScrolled] = useState(false);
+    const [mobileActive, setMobileActive] = useState(false);
 
-        nav.classList.toggle("mobile-active");
-
-        const expanded = btn.getAttribute("aria-expanded") === "true" || false;
-        btn.setAttribute("aria-expanded", !expanded);
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header>
-            <div
-                className="navbar container"
-                role="navigation"
-                aria-label="Main Navigation"
-            >
-                <div className="brand">
-                    <a href="#home">
-                        Dandi<span>Rasyid</span>
-                    </a>
+        <header className={scrolled ? "header-scrolled" : ""}>
+            <div className="container header-wrap">
+                <div className="logo">
+                    <a href="#home">Dandi.</a>
                 </div>
-                <nav className="nav-links" aria-label="Primary">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#tech-stack">Stack</a>
-                    <a href="#certificates">Certificates</a>
-                    <a href="#contact" className="cta">
-                        Contact
-                    </a>
+
+                <nav className={`nav-menu ${mobileActive ? "active" : ""}`}>
+                    <a href="#about" onClick={() => setMobileActive(false)}>About</a>
+                    <a href="#portfolio" onClick={() => setMobileActive(false)}>Work</a>
+                    <a href="#experience" onClick={() => setMobileActive(false)}>Exp</a>
+                    <a href="#contact" className="cta-link" onClick={() => setMobileActive(false)}>Get in touch</a>
                 </nav>
+
                 <button
-                    className="menu-btn"
-                    aria-expanded="false"
-                    aria-label="Open menu"
-                    onClick={toggleMobileMenu}
+                    className={`nav-toggle ${mobileActive ? "active" : ""}`}
+                    onClick={() => setMobileActive(!mobileActive)}
+                    aria-label="Toggle menu"
                 >
-                    ☰
+                    <span className="line"></span>
+                    <span className="line"></span>
                 </button>
             </div>
         </header>

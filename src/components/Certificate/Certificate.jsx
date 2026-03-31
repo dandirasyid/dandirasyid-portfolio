@@ -3,82 +3,39 @@ import certificates from "../utils/constants/certificate";
 import { useState } from "react";
 
 function Certificate() {
-    const certificatesPerClick = 3;
-    const [visibleCount, setVisibleCount] = useState(certificatesPerClick);
-
-    const handleLoadMore = () => {
-        if (visibleCount >= certificates.length) {
-            setVisibleCount(certificatesPerClick);
-        } else {
-            setVisibleCount((prev) => prev + certificatesPerClick);
-        }
-    };
+    const [visibleCount, setVisibleCount] = useState(3);
 
     return (
-        <div>
-            <section
-                id="certificates"
-                className="section certificate"
-                aria-labelledby="certificates-title"
-            >
-                <div className="container">
-                    <div className="section-head">
-                        <div className="h-sub h-sub-color">
-                            — Certificates —
-                        </div>
-                        <h2 id="certificates-title" className="h-title">
-                            My Achievements
-                        </h2>
-                    </div>
-
-                    <div className="certificates-grid">
-                        {certificates.slice(0, visibleCount).map((cert) => (
-                            <article className="certificate-item" key={cert.id}>
-                                <div className="certificate-thumb-wrap">
-                                    <img
-                                        className="certificate-thumb"
-                                        src={cert.img}
-                                        alt={cert.title}
-                                    />
-                                    <a
-                                        href={cert.link}
-                                        className="certificate-link"
-                                        target="__blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <span>↗</span>
-                                    </a>
-                                </div>
-                                <div className="certificate-body">
-                                    <h3>{cert.title}</h3>
-                                    <p className="certificate-desc">
-                                        {cert.desc}
-                                    </p>
-                                    <div className="certificate-tags">
-                                        {cert.tags.map((tag, index) => (
-                                            <span key={index}>{tag}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
-
-                    {certificates.length > certificatesPerClick && (
-                        <div className="certificate-actions">
-                            <button
-                                onClick={handleLoadMore}
-                                className="btn-certificate-loadmore"
-                            >
-                                {visibleCount >= certificates.length
-                                    ? "Show Less"
-                                    : "Load More"}
-                            </button>
-                        </div>
-                    )}
+        <section id="certificates" className="section certificates">
+            <div className="container">
+                <div className="cert-header-premium">
+                    <span className="section-label">Validation</span>
+                    <h2 className="section-title-premium">Verified Skills</h2>
                 </div>
-            </section>
-        </div>
+
+                <div className="cert-list-premium">
+                    {certificates.slice(0, visibleCount).map((cert) => (
+                        <article className="cert-row-premium" key={cert.id}>
+                            <div className="cert-info-main">
+                                <h3 className="cert-title-premium">{cert.title}</h3>
+                                <p className="cert-org-premium">{cert.desc.split(' from ')[1] || 'Accredited Institution'}</p>
+                            </div>
+                            <div className="cert-actions-premium">
+                                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="btn-cert-view">
+                                    Verify Receipt ↗
+                                </a>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+
+                <div className="cert-footer-premium">
+                    <button onClick={() => setVisibleCount(visibleCount === 3 ? certificates.length : 3)} className="btn-toggle-certs">
+                        {visibleCount === 3 ? 'View all documents' : 'Show fewer'}
+                    </button>
+                </div>
+            </div>
+        </section>
     );
 }
 
